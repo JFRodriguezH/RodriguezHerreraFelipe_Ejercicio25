@@ -1,7 +1,5 @@
 #include <iostream>
 
-int rellenar(int **M);
-
 int main(){
     int x;
 	bool c = true;
@@ -20,11 +18,14 @@ int main(){
 			M[i][j]=i+j;
 		}
 	}
-	std::cout<<M[1][2]<<std::endl;
+	for(int i=0; i<x+2;i++){
+		std::cout<<" "<<M[0][i]<<" ";
+	}
+	std::cout<<std::endl;
+	int suma;
+	for(int i=0; i<x;i++){
+		suma+=M[i][0];
+	}
+	std::cout<<suma<<std::endl;
     return 0;
-}
-
-int rellenar(int **M){
-	M[0][0] = 1;
-	return 0;
 }
