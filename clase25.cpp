@@ -1,5 +1,7 @@
 #include <iostream>
 
+int rellenar(int **M);
+
 int main(){
     int x;
 	bool c = true;
@@ -12,13 +14,17 @@ int main(){
 			std::cout<<"Error, el numero no esta entre 3 y 11."<<std::endl;
 		}	
     }
-    int m[x][x+2]{};
-	rellenar(m);
-	std::cout<<m[0][0];
+    int M[x][x+2];
+	for(int i=0; i<x; i++){
+		for(int j=0; j<(x+2); j++){
+			M[i][j]=i+j;
+		}
+	}
+	std::cout<<M[1][2]<<std::endl;
     return 0;
 }
 
-int rellenar(int **m){
-	m[0][0] = 1;
+int rellenar(int **M){
+	M[0][0] = 1;
 	return 0;
 }
